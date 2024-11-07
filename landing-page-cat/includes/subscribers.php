@@ -330,7 +330,7 @@ function fca_lpc_subscribers_page() {
 			<?php wp_nonce_field(); ?>
 			<input size='35' type='text' name='search_text' value='<?php echo $search_text ?>' ></input>
 			<button class='button button-secondary' name='search' type='submit'>Search subscribers</button>
-			<a href='<?php echo add_query_arg( array( 'fca_lpc_export' => true, '_wpnonce' => wp_create_nonce() ) ) ?>' class='button button-secondary' style='float:right;' download >Download CSV</a>
+			<a href='<?php echo esc_url( add_query_arg( array( 'fca_lpc_export' => true, '_wpnonce' => wp_create_nonce() ) ) ) ?>' class='button button-secondary' style='float:right;' download >Download CSV</a>
 		</form>
 		<br>
 			<table class='wp-list-table widefat fixed striped'>
@@ -368,11 +368,11 @@ function fca_lpc_subscribers_page() {
 			<br>
 		<?php
 		if ( $page ) {
-			$prev_page_link = add_query_arg( 'paged', $page - 1 );
+			$prev_page_link = esc_url( add_query_arg( 'paged', $page - 1 ) );
 			echo "<a href='$prev_page_link'>Previous</a>";
 		}
 		if ( count( $subscribers ) >= $post_limit ) {
-			$next_page_link = add_query_arg( 'paged', $page + 1 );
+			$next_page_link = esc_url( add_query_arg( 'paged', $page + 1 ) );
 			echo "<a style='float:right;' href='$next_page_link'>Next</a>";
 		}
 		?>

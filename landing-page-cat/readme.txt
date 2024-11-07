@@ -8,7 +8,7 @@ Requires at least: 4.0
 Tested up to: 6.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.7.5
+Stable tag: 1.7.7
 
 Landing Page Cat Lets You Publish A Beautiful Coming Soon Page, Maintenance Page or Squeeze Page For WordPress, In Just 2 Minutes.
 == Description ==
@@ -303,6 +303,9 @@ Our full privacy policy is available here: [https://fatcatapps.com/legal/privacy
 
 
 == Changelog ==
+
+= Landing Page Cat 1.7.7 =
+* Fix possible XSS vulnerability reported.
 
 = Landing Page Cat 1.7.6 =
 * Fix main menu not showing up in WP Admin.
